@@ -1,25 +1,3 @@
-<!doctype html public "-//W3C//DTD HTML 4.0 //EN">
-<html>
-<head>
-<title>Charleston's Sunrise / Sunset Report</title>
-</head>
-
-<!--**************************************************************************
-<! * PHP_Program1                                                            *
-<! * Robert Cline                                                            *
-<! * November 19, 2013                                                       *
-<! ***************************************************************************
--->
-
-<body>
-<body bgcolor = "lightgray">
-<center><br><br><br>
-<font color = "blue">
-<font face = "arial" size = '+2'>
-<h1>Charleston's Sunrise / Sunset Report</h1>
-<br><br><br><br></center>
-<font color = "black">
-
 <?php
      // Set Time Zone
           date_default_timezone_set('America/New_York');
@@ -49,5 +27,3 @@
 <br><br><br><br>
 <font face = "arial" size = '-2'>
 * Calculations based on EST at latitude 33, longitude -80.
-</body>
-</html>
