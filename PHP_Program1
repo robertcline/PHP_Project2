@@ -1,0 +1,53 @@
+<!doctype html public "-//W3C//DTD HTML 4.0 //EN">
+<html>
+<head>
+<title>Charleston's Sunrise / Sunset Report</title>
+</head>
+
+<!--**************************************************************************
+<! * PHP_Program1                                                            *
+<! * Robert Cline                                                            *
+<! * November 19, 2013                                                       *
+<! ***************************************************************************
+-->
+
+<body>
+<body bgcolor = "lightgray">
+<center><br><br><br>
+<font color = "blue">
+<font face = "arial" size = '+2'>
+<h1>Charleston's Sunrise / Sunset Report</h1>
+<br><br><br><br></center>
+<font color = "black">
+
+<?php
+     // Set Time Zone
+          date_default_timezone_set('America/New_York');
+
+     // Acquire Today's Date
+           $now=date("l, m/d/20y");
+           
+     // Display Today's Date
+           print "Today is $now.<br><br><br>";
+
+     // Indent
+           print "<ol>";
+           
+           // Display Sunrise announcement using the date-sunrise function
+                      print "Sunrise ";
+                      echo date(" F d, Y"). ' will be at ' .date_sunrise(time(), SUNFUNCS_RET_STRING, 33, -80, 90, -5);	//This is for Eastern Std Time
+                      print " hours. <br><br><br>";
+
+           // Display Sunset announcement using the date-sunset function
+                      echo ' Expect the sun to set at ' .date_sunset(time(), SUNFUNCS_RET_STRING, 33, -80, 90, -5);	//This is for Eastern Std Time
+                      print " hours.<br><br><br><br><br><br><br>";
+
+     // End indent
+           print "</ol>";
+?>
+
+<br><br><br><br>
+<font face = "arial" size = '-2'>
+* Calculations based on EST at latitude 33, longitude -80.
+</body>
+</html>
